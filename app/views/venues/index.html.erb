@@ -34,12 +34,12 @@
                 <% @search_result["venues"].map do |result| %>
                     <% @venue_match.each do |match| %>
 
-                        <% if match["name"] == result["name"]%>
+                        <% if match["name"] == result["name"] && %>
                             <a href="venues/<%=match.id%>"><%=match["name"]%></a><br/>
                         <% end %>
                     <% end %>
                     <%= result["name"] %><br/>
-                    <%= result["display_location"].titleize %><br/><br/>
+                    <%= result["display_location"].capitalize %><br/><br/>
                 <% end %>
 
             <% end %>

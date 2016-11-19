@@ -3,7 +3,6 @@ class VenuesController < ApplicationController
 	def index
     @search = params[:search]
 
-
     @search_result = HTTParty.get("https://api.seatgeek.com/2/venues/?q=#{@search}")
 
 
